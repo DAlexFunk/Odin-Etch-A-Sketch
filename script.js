@@ -1,17 +1,25 @@
 const container = document.querySelector(".container");
 const squares = document.querySelectorAll(".square");
-const button = document.querySelector("button");
-setBoxSize(16);
+const changeButton = document.querySelector(".changeButton");
+const resetButton = document.querySelector(".resetButton");
 
-button.addEventListener("click", () => {
-    let boxSize = 0;
+let currentBoxSize = 16;
+setBoxSize(currentBoxSize);
+
+changeButton.addEventListener("click", () => {
     do {
-        boxSize = prompt("What size do you want the box to be (square) max of 100");
-    } while(0 >= boxSize || boxSize > 100);
+        currentBoxSize = prompt("What size do you want the box to be (square) max of 100");
+    } while(0 >= currentBoxSize || currentBoxSize > 100);
 
     const rows = document.querySelectorAll(".row");
     rows.forEach((row) => row.remove())
-    setBoxSize(boxSize);
+    setBoxSize(currentBoxSize);
+})
+
+resetButton.addEventListener("click", () => {
+    const rows = document.querySelectorAll(".row");
+    rows.forEach((row) => row.remove())
+    setBoxSize(currentBoxSize); 
 })
 
 
