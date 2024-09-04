@@ -1,0 +1,36 @@
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 512px;
+    width: 512px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid red;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex: 1;
+}
+
+.square,
+.hoveredSquare {
+    flex: 1;
+
+}
+
+.square {
+    background-color: gray;
+}
+
+.hoveredSquare {
+    background-color: red;
+}
