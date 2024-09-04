@@ -9,8 +9,9 @@ button.addEventListener("click", () => {
         boxSize = prompt("What size do you want the box to be (square) max of 100");
     } while(boxSize > 100);
 
-    clearChildren(".container");
-    // setBoxSize(boxSize);
+    const rows = document.querySelectorAll(".row");
+    rows.forEach((row) => row.remove());
+    setBoxSize(boxSize);
 })
 
 
