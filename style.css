@@ -39,8 +39,25 @@ body {
 
 
 .header {
-    background-color: white;
+    background-color: rgb(100, 0, 0);
+    color: rgb(225, 225, 225);
     width: 100vw;
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
+}
+
+
+.buttons {
+    display: flex;
+    background-color: rgb(100, 0, 0);
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+}
+
+button {
+    background-color: rgb(225, 225, 225);
+    border-radius: 4px;
 }
