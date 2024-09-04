@@ -7,10 +7,10 @@ button.addEventListener("click", () => {
     let boxSize = 0;
     do {
         boxSize = prompt("What size do you want the box to be (square) max of 100");
-    } while(boxSize > 100);
+    } while(0 >= boxSize || boxSize > 100);
 
     const rows = document.querySelectorAll(".row");
-    rows.forEach((row) => row.remove());
+    rows.forEach((row) => row.remove())
     setBoxSize(boxSize);
 })
 
